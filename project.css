@@ -1,0 +1,582 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  
+  body {
+    background: #F4F4F2;
+    color: #000000;
+  
+    font-family:
+      Arial,
+      Helvetica,
+      sans-serif;
+  
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  
+  /* =========================================
+     NAV
+  ========================================= */
+  
+  .project-nav {
+  
+    position: fixed;
+  
+    top: 0;
+    left: 0;
+  
+    width: 100%;
+    height: 88px;
+  
+    padding:
+      0 40px;
+  
+    display: flex;
+  
+    align-items: center;
+  
+    justify-content: space-between;
+  
+    background:
+      rgba(
+        244,
+        244,
+        242,
+        0.94
+      );
+  
+    backdrop-filter:
+      blur(8px);
+  
+    z-index: 100;
+  }
+  
+  
+  .project-logo {
+  
+    font-size:
+      12px;
+  
+    font-weight:
+      500;
+  
+    letter-spacing:
+      -0.03em;
+  }
+  
+  
+  .project-back {
+  
+    font-size:
+      12px;
+  
+    font-weight:
+      400;
+  
+    letter-spacing:
+      0.02em;
+  
+    transition:
+      opacity
+      0.25s ease;
+  }
+  
+  
+  .project-back:hover {
+    opacity:
+      0.45;
+  }
+  
+  
+  /* =========================================
+     PAGE
+  ========================================= */
+  
+  .project-page {
+  
+    width:
+      100%;
+  
+    min-height:
+      100vh;
+  
+    padding-top:
+      88px;
+  
+    display:
+      grid;
+  
+    grid-template-columns:
+      28%
+      72%;
+  }
+  
+  
+  /* =========================================
+     LEFT INFORMATION
+  ========================================= */
+  
+  .project-detail {
+  
+    position:
+      relative;
+  
+    border-right:
+      none;
+  }
+  
+  
+  .project-detail-inner {
+  
+    position:
+      sticky;
+  
+    top:
+      88px;
+  
+    min-height:
+      calc(100vh - 88px);
+  
+    padding:
+      70px 35px 70px 30px;
+  
+    display:
+      flex;
+  
+    flex-direction:
+      column;
+  
+    justify-content:
+      space-between;
+  }
+  
+  
+  /* =========================================
+     CATEGORY
+  ========================================= */
+  
+  .project-category-label {
+  
+    font-size:
+      12px;
+  
+    line-height:
+      1;
+  
+    text-transform:
+      uppercase;
+  
+    letter-spacing:
+      0.04em;
+  
+    margin-bottom:
+      30px;
+  }
+  
+  
+  /* =========================================
+     TITLE
+  ========================================= */
+  
+  .project-title {
+  
+    font-family:
+      Georgia,
+      "Times New Roman",
+      serif;
+  
+    font-size:
+      clamp(
+        46px,
+        5vw,
+        88px
+      );
+  
+    line-height:
+      0.95;
+  
+    font-weight:
+      400;
+  
+    letter-spacing:
+      -0.055em;
+  
+    margin:
+      0 0 40px;
+  }
+  
+  
+  /* =========================================
+     DESCRIPTION
+  ========================================= */
+  
+  .project-description {
+  
+    max-width:
+      440px;
+  
+    font-size:
+      16px;
+  
+    line-height:
+      1.55;
+  
+    letter-spacing:
+      -0.015em;
+  }
+  
+  
+  .project-description p + p {
+  
+    margin-top:
+      18px;
+  }
+  
+  
+  /* =========================================
+     META
+  ========================================= */
+  
+  .project-meta {
+  
+    padding-top:
+      25px;
+  
+    border-top:
+      1px solid #111111;
+  
+    display:
+      flex;
+  
+    flex-direction:
+      column;
+  
+    gap:
+      12px;
+  
+    max-width:
+      440px;
+  
+    font-size:
+      13px;
+  
+    line-height:
+      1.4;
+  }
+  
+  
+  .project-meta > div {
+  
+    display:
+      grid;
+  
+    grid-template-columns:
+      80px 1fr;
+  
+    gap:
+      20px;
+  }
+  
+  
+  .meta-label {
+  
+    color:
+      #777777;
+  }
+  
+  
+  /* =========================================
+     RIGHT VISUAL AREA
+  ========================================= */
+  
+  .project-visuals {
+
+    width:
+      100%;
+  
+    padding:
+      60px 5vw 40px 40px;
+  
+    display:
+      flex;
+  
+    flex-direction:
+      column;
+  
+    gap:
+      40px;
+  
+    align-items:
+      stretch;
+  }
+  
+  
+  .project-visual {
+  
+    width:
+      100%;
+  
+    display:
+      block;
+  }
+  
+  
+  .project-visual img,
+  .project-visual video {
+  
+    width:
+      100%;
+  
+    height:
+      auto;
+  
+    display:
+      block;
+  
+    object-fit:
+      cover;
+  }
+  
+  
+  /* =========================================
+     FIRST / HERO VISUAL
+  ========================================= */
+  
+  .project-visual:first-child {
+
+    width:
+      100%;
+  
+    min-height:
+      auto;
+  
+    display:
+      block;
+  }
+  
+  
+  .project-visual:first-child img,
+  .project-visual:first-child video {
+  
+    display:
+      block;
+  
+    width:
+      100%;
+  
+    height:
+      auto;
+  
+    max-height:
+      none;
+  
+    object-fit:
+      contain;
+  }
+  
+  
+  /* =========================================
+     TABLET
+  ========================================= */
+  
+  @media (max-width: 900px) {
+  
+    .project-nav {
+  
+      height:
+        72px;
+  
+      padding:
+        0 24px;
+    }
+  
+  
+    .project-page {
+  
+      padding-top:
+        72px;
+  
+      display:
+        block;
+    }
+  
+  
+    .project-detail {
+  
+      border-right:
+        none;
+  
+      border-bottom:
+        1px solid #111111;
+    }
+  
+  
+    .project-detail-inner {
+  
+      position:
+        relative;
+  
+      top:
+        auto;
+  
+      min-height:
+        auto;
+  
+      padding:
+        60px 24px 50px;
+    }
+  
+  
+    .project-title {
+  
+      font-size:
+        clamp(
+          46px,
+          9vw,
+          75px
+        );
+  
+      margin-bottom:
+        35px;
+    }
+  
+  
+    .project-description {
+  
+      max-width:
+        700px;
+  
+      margin-bottom:
+        50px;
+    }
+  
+  
+    .project-meta {
+  
+      max-width:
+        700px;
+    }
+  
+  
+    .project-visuals {
+  
+      padding:
+        24px;
+  
+      gap:
+        24px;
+    }
+  
+  
+    .project-visual:first-child {
+  
+      min-height:
+        auto;
+  
+      display:
+        block;
+    }
+  
+  
+    .project-visual:first-child img,
+    .project-visual:first-child video {
+  
+      max-height:
+        none;
+  
+      object-fit:
+        contain;
+    }
+  
+  }
+  
+  
+  /* =========================================
+     MOBILE
+  ========================================= */
+  
+  @media (max-width: 600px) {
+  
+    .project-nav {
+  
+      padding:
+        0 20px;
+    }
+  
+  
+    .project-logo {
+  
+      font-size:
+        17px;
+    }
+  
+  
+    .project-back {
+  
+      font-size:
+        11px;
+    }
+  
+  
+    .project-detail-inner {
+  
+      padding:
+        45px 20px 40px;
+    }
+  
+  
+    .project-category-label {
+  
+      margin-bottom:
+        25px;
+    }
+  
+  
+    .project-title {
+  
+      font-size:
+        42px;
+  
+      line-height:
+        0.98;
+  
+      margin-bottom:
+        30px;
+    }
+  
+  
+    .project-description {
+  
+      font-size:
+        15px;
+  
+      line-height:
+        1.55;
+    }
+  
+  
+    .project-visuals {
+  
+      padding:
+        20px;
+  
+      gap:
+        20px;
+    }
+  
+  }
